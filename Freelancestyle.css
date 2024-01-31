@@ -1,0 +1,46 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: violet; /* Violet Purple Background */
+    color: white;
+    text-align: center; /* Center aligning everything */
+}
+
+header {
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+#freelancer-list ol {
+    list-style-type: none;
+    padding: 20px;
+}
+
+#freelancer-list ol li {
+    background-color: purple; /* Darker shade for list items */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: darkviolet;
+}
+
+@media screen and (max-width: 600px) {
+    /* Responsive design adjustments for smaller screens */
+    body {
+        font-size: 14px;
+    }
+}

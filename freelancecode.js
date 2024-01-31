@@ -26,7 +26,7 @@ let currentIndex = 0;
 
 function updateAveragePrice() {
     let total = 0;
-    let count = currentIndex > 0 ? currentIndex : 3; // Use 3 if currentIndex is 0
+    let count = currentIndex > 0 ? currentIndex : 3;
     for (let i = 0; i < count; i++) {
         total += freelancers[i].price;
     }
@@ -36,7 +36,7 @@ function updateAveragePrice() {
 
 function addFreelancerPeriodically() {
     if (currentIndex < freelancers.length) {
-        const list = document.getElementById('freelancer-list').getElementsByTagName('ul')[0];
+        const list = document.getElementById('freelancer-list').getElementsByTagName('ol')[0];
         const freelancer = freelancers[currentIndex];
         const listItem = document.createElement('li');
         listItem.textContent = `${freelancer.name} - ${freelancer.occupation} - $${freelancer.price}`;
@@ -46,5 +46,7 @@ function addFreelancerPeriodically() {
     }
 }
 
-// Call the function every 5 seconds
-setInterval(addFreelancerPeriodically, 5000);
+document.addEventListener('DOMContentLoaded', () => {
+    setInterval(addFreelancerPeriodically, 5000);
+    updateAveragePrice();
+});
